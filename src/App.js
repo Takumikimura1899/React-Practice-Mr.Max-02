@@ -16,6 +16,8 @@ function App() {
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
+
+  // []で初回のみのレンダリング
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem('isLoggedIn');
     console.log(storedUserLoggedInInformation);

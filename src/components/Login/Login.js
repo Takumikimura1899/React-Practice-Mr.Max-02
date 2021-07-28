@@ -11,9 +11,15 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+  console.log('Effect前のチェックだよ');
   useEffect(() => {
     console.log('Effect 走ったよ');
-  });
+
+    return () => {
+      console.log('Effect クリーンアップ');
+    };
+  }, []);
+  console.log('Effect後のチェックだよ');
 
   useEffect(() => {
     // 500秒後に起動する非同期処理
